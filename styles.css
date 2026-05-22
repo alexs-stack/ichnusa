@@ -1342,7 +1342,7 @@
     max-width: var(--max);
     margin: 0 auto;
 }
-.legal-inner { max-width: 42rem; }
+.legal-inner { max-width: 48rem; margin: 0 auto; }
 .legal-section {
     padding: 1.75rem 0;
     border-bottom: 1px solid var(--hairline);
@@ -1593,3 +1593,53 @@
 /* Tour-list-page: tighten top padding since editorial-spread now sits above */
 .tour-list-page { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
 .tour-list-page .tour-intro { display: none; }  /* moved into spread body */
+
+/* ============ Legal hero (Regolamento, Disposizioni) ============
+   Centered narrow hero — appropriate dignity for legal text.
+   No image; just label + h1 stacked tight. */
+.legal-hero {
+    padding: clamp(2rem, 4vw, 3.5rem) var(--gutter) clamp(2rem, 4vw, 3rem);
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid var(--hairline);
+}
+.legal-hero .label {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+.legal-hero h1 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    line-height: 1.0;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+}
+.legal-hero h1 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+
+/* ============ Editorial spread: .lede paragraph (used by tour details) ============ */
+.editorial-spread-body p.lede {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 80, 'SOFT' 80;
+    font-weight: 400;
+    font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: -0.012em;
+    margin-bottom: 1.25rem;
+}
+
+/* Tighten cta-strip top padding when it follows an editorial-spread */
+.editorial-spread + .cta-strip,
+.specs-grid + .cta-strip {
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Tour-detail-body no longer used directly — its successor is editorial-spread */
+.tour-detail-body { display: none; }
