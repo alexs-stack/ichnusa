@@ -1479,3 +1479,117 @@
     }
     .crew-spread.reverse .crew-spread-portrait { order: -1; }
 }
+
+/* ============ Editorial spread (generic page-hero + body) ============
+   Used by la-barca, filosofia, tour. Same DNA as .crew-spread.
+   Image left, content right (label + h1 + body paragraphs).
+   .reverse flips columns. */
+.editorial-spread {
+    padding: clamp(1.25rem, 2.5vw, 2.25rem) var(--gutter) clamp(3rem, 6vw, 5rem);
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: stretch;
+}
+.editorial-spread.reverse {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+.editorial-spread-figure {
+    overflow: hidden;
+    margin-left: calc(-1 * var(--gutter));
+    min-height: 540px;
+    position: relative;
+}
+.editorial-spread.reverse .editorial-spread-figure {
+    margin-left: 0;
+    margin-right: calc(-1 * var(--gutter));
+}
+.editorial-spread-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+    transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+.editorial-spread-figure:hover img { transform: scale(1.03); }
+
+.editorial-spread-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0.5rem;
+}
+.editorial-spread-head {
+    padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    border-bottom: 1px solid var(--hairline);
+}
+.editorial-spread-head .label {
+    display: inline-block;
+    margin-bottom: clamp(0.9rem, 1.5vw, 1.4rem);
+}
+.editorial-spread-head h1 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-weight: 350;
+    font-size: clamp(2.1rem, 4.2vw, 3.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.024em;
+    color: var(--ink);
+}
+.editorial-spread-head h1 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.editorial-spread-body p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin-bottom: 1.1rem;
+    max-width: 42rem;
+}
+.editorial-spread-body p:last-child { margin-bottom: 0; }
+.editorial-spread-body .drop {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 90;
+    font-weight: 400;
+    font-size: 2.4em;
+    line-height: 0.9;
+    float: left;
+    padding: 0.1em 0.15em 0 0;
+    color: var(--ink);
+}
+/* Philosophy: larger serif paragraphs for the short editorial statements */
+.editorial-spread-body.philosophy-text p {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 32, 'SOFT' 70;
+    font-weight: 400;
+    font-size: clamp(1.15rem, 1.55vw, 1.4rem);
+    line-height: 1.45;
+    color: var(--ink);
+    letter-spacing: -0.008em;
+    margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .editorial-spread,
+    .editorial-spread.reverse {
+        grid-template-columns: 1fr;
+        gap: clamp(1.5rem, 4vw, 2.5rem);
+    }
+    .editorial-spread-figure,
+    .editorial-spread.reverse .editorial-spread-figure {
+        margin-left: calc(-1 * var(--gutter));
+        margin-right: calc(-1 * var(--gutter));
+        min-height: 0;
+        aspect-ratio: 5/4;
+    }
+    .editorial-spread.reverse .editorial-spread-figure { order: -1; }
+}
+
+/* Tour-list-page: tighten top padding since editorial-spread now sits above */
+.tour-list-page { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+.tour-list-page .tour-intro { display: none; }  /* moved into spread body */
