@@ -1643,3 +1643,184 @@
 
 /* Tour-detail-body no longer used directly — its successor is editorial-spread */
 .tour-detail-body { display: none; }
+
+/* ============ Tariffe: compact layout ============ */
+.rates-hero {
+    padding: clamp(2rem, 4vw, 3.5rem) var(--gutter) clamp(1.5rem, 3vw, 2.5rem);
+    max-width: 52rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.rates-hero .label { display: inline-block; margin-bottom: 1rem; }
+.rates-hero h1 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    line-height: 1.0;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+}
+.rates-hero h1 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.rates-hero-lede {
+    font-size: 1.02rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 38rem;
+    margin: 0 auto;
+}
+
+.rates-main {
+    padding: clamp(1rem, 2vw, 2rem) var(--gutter) clamp(2rem, 4vw, 3rem);
+    max-width: 64rem;
+    margin: 0 auto;
+}
+.rate-combined {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--serif);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+.rate-combined thead th {
+    text-align: left;
+    padding: 0.85rem 0;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-bottom: 1px solid var(--hairline);
+}
+.rate-combined thead th:nth-child(2),
+.rate-combined thead th:nth-child(3) { text-align: right; }
+.rate-combined tbody td {
+    padding: 1rem 0;
+    border-bottom: 1px dotted var(--hairline-2);
+    font-variation-settings: 'opsz' 32, 'SOFT' 70;
+    font-size: 1.12rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+.rate-combined tbody td:nth-child(2),
+.rate-combined tbody td:nth-child(3) {
+    text-align: right;
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+}
+.rate-combined tr.rate-peak td { background: oklch(0.94 0.025 50); }
+.rate-combined tr.rate-peak td:first-child {
+    font-style: italic;
+    font-variation-settings: 'opsz' 32, 'SOFT' 100;
+}
+.rate-combined tfoot td {
+    padding: 0.85rem 0 0;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    text-align: center;
+    border: none;
+}
+
+.rates-daily {
+    padding: clamp(1.5rem, 3vw, 2.5rem) var(--gutter);
+    max-width: 64rem;
+    margin: 0 auto;
+}
+.rates-section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+.rates-section-head .label { flex-shrink: 0; }
+.rates-section-head p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0;
+}
+.rate-daily-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+}
+.rate-daily-grid li {
+    padding: 1.25rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    border-right: 1px dotted var(--hairline-2);
+    text-align: center;
+}
+.rate-daily-grid li:last-child { border-right: none; }
+.rate-d-num {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 80, 'SOFT' 70;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+.rate-d-unit {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+}
+.rate-d-pct {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 32, 'SOFT' 80;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--terra-deep);
+    margin-top: 0.2rem;
+}
+.rate-daily-grid li.rate-d-weekend { background: oklch(0.97 0.012 80); }
+
+.rates-notes-compact {
+    padding: clamp(1.5rem, 3vw, 2.5rem) var(--gutter);
+    max-width: 64rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    border-top: 1px solid var(--hairline);
+    padding-top: clamp(2rem, 3vw, 2.5rem);
+}
+.rates-note-compact .label { display: block; margin-bottom: 0.65rem; }
+.rates-note-compact p {
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0 0 0.4rem;
+}
+
+@media (max-width: 720px) {
+    .rate-combined thead th:nth-child(2),
+    .rate-combined thead th:nth-child(3),
+    .rate-combined tbody td:nth-child(2),
+    .rate-combined tbody td:nth-child(3) {
+        font-size: 0.95rem;
+    }
+    .rate-daily-grid { grid-template-columns: repeat(3, 1fr); }
+    .rate-daily-grid li {
+        border-right: 1px dotted var(--hairline-2);
+        border-bottom: 1px dotted var(--hairline-2);
+    }
+    .rate-daily-grid li:nth-child(3n) { border-right: none; }
+    .rates-notes-compact { grid-template-columns: 1fr; gap: 1.5rem; }
+}
