@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+ChatGPT Image*.png
+*.swp
+*.bak
+.idea/
+.vscode/
+node_modules/
