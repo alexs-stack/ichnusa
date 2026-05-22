@@ -929,3 +929,454 @@
             .btn { width: 100%; justify-content: space-between; }
             .contact-grid { padding-top: 1.5rem; }
         }
+
+/* ============ Subpage shared layout ============ */
+.subpage {
+    padding-top: 80px;
+}
+
+.page-hero {
+    padding: clamp(3rem, 7vw, 5.5rem) var(--gutter) clamp(2rem, 5vw, 3.5rem);
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+}
+.page-hero.has-figure {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: end;
+}
+@media (min-width: 1025px) {
+    .page-hero:has(.page-hero-figure) {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        align-items: end;
+    }
+}
+.page-hero-inner { max-width: 38rem; }
+.page-hero-inner .label {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+.page-hero h1 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-weight: 350;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.96;
+    letter-spacing: -0.026em;
+    color: var(--ink);
+}
+.page-hero h1 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.page-hero-figure {
+    margin-right: calc(-1 * var(--gutter));
+    overflow: hidden;
+}
+.page-hero-figure img {
+    width: 100%;
+    aspect-ratio: 5/4;
+    object-fit: cover;
+}
+
+/* ============ Boat detail page ============ */
+.boat-detail {
+    padding: clamp(3rem, 7vw, 6rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.boat-detail-inner { max-width: 42rem; }
+.boat-detail-text p {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--ink-2);
+    margin-bottom: 1.5rem;
+}
+.boat-detail-text p:first-child .drop { display: inline; }
+
+/* ============ Specs (full grid) ============ */
+.specs-grid {
+    padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+}
+.specs.specs-full {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 2.5rem;
+    margin-top: 1rem;
+}
+@media (max-width: 900px) {
+    .specs.specs-full { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+    .specs.specs-full { grid-template-columns: 1fr; }
+}
+
+/* ============ Rates tables ============ */
+.rates-table {
+    padding: clamp(2.5rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+}
+.rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-family: var(--serif);
+}
+.rate-table thead th {
+    text-align: left;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--ink);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+}
+.rate-table tbody td {
+    padding: 1rem 0;
+    border-bottom: 1px dotted var(--hairline-2);
+    font-variation-settings: 'opsz' 32, 'SOFT' 70;
+    font-size: 1.1rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+.rate-table tbody td:last-child {
+    text-align: right;
+    font-feature-settings: 'tnum';
+}
+.rates-intro {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    max-width: 38rem;
+    margin-top: 1rem;
+}
+.rates-notes {
+    padding: clamp(2rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    background: var(--parchment-2);
+    border-radius: 4px;
+}
+.rates-notes-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+@media (max-width: 900px) {
+    .rates-notes-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+.rates-note-block .label { display: block; margin-bottom: 0.75rem; }
+.rates-note-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin-bottom: 0.5rem;
+}
+
+/* ============ CTA strip (cross-page) ============ */
+.cta-strip {
+    padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid var(--hairline);
+}
+.cta-strip h2 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    margin-bottom: 1.25rem;
+}
+.cta-strip h2 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.cta-strip-lede {
+    font-size: 1.05rem;
+    color: var(--ink-2);
+    max-width: 36rem;
+    margin: 0 auto 1.75rem;
+    line-height: 1.6;
+}
+.cta-strip-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ============ Philosophy page ============ */
+.philosophy-body {
+    padding: clamp(3rem, 7vw, 6rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.philosophy-inner { max-width: 42rem; margin: 0 auto; }
+.philosophy-p {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 32, 'SOFT' 70;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.008em;
+}
+
+/* ============ Tour list page ============ */
+.tour-list-page {
+    padding: clamp(2rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.tour-intro {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    max-width: 42rem;
+    margin: 0 0 3rem;
+}
+
+/* ============ Tour detail page ============ */
+.tour-detail-body {
+    padding: clamp(2rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.tour-detail-inner { max-width: 42rem; }
+.tour-detail-lede {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 80, 'SOFT' 80;
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.012em;
+}
+.tour-detail-body-p {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: var(--ink-2);
+    margin-bottom: 1.5rem;
+}
+.tour-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(2rem, 4vw, 3rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.tour-nav a {
+    color: var(--ink-2);
+    transition: color .25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.tour-nav a:hover { color: var(--terra-deep); }
+.tour-nav-up { font-style: italic; }
+@media (max-width: 560px) {
+    .tour-nav { flex-direction: column; gap: 1rem; }
+}
+
+/* ============ Crew detail page ============ */
+.crew-detail {
+    padding: clamp(2rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 7vw, 6rem);
+}
+.crew-card-full {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+.crew-card-full:nth-child(even) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+.crew-card-full:nth-child(even) .crew-portrait-full { order: 2; }
+@media (max-width: 900px) {
+    .crew-card-full,
+    .crew-card-full:nth-child(even) { grid-template-columns: 1fr; }
+    .crew-card-full:nth-child(even) .crew-portrait-full { order: 0; }
+}
+.crew-portrait-full {
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    background: var(--parchment-2);
+}
+.crew-portrait-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+.crew-text-full { padding-top: 1rem; }
+.crew-meta-full {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.crew-name-full {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    letter-spacing: -0.022em;
+    color: var(--ink);
+}
+.crew-text-full p {
+    font-size: 1.04rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin-bottom: 1.2rem;
+    max-width: 38rem;
+}
+
+/* ============ Contact page ============ */
+.contact-page {
+    padding: clamp(2rem, 5vw, 4rem) var(--gutter) clamp(4rem, 8vw, 6rem);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.contact-page-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+}
+@media (max-width: 900px) {
+    .contact-page-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* ============ Contact form ============ */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.form-row label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+    font-family: var(--sans);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: none;
+    border-bottom: 1px solid var(--hairline-2);
+    padding: 0.65rem 0.1rem;
+    border-radius: 0;
+    transition: border-color .25s ease;
+}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-bottom-color: var(--terra-deep);
+}
+.form-row textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: var(--sans);
+}
+.form-row-2 {
+    flex-direction: row;
+    gap: 1.5rem;
+}
+.form-row-2 > div { flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
+@media (max-width: 560px) {
+    .form-row-2 { flex-direction: column; gap: 1.25rem; }
+}
+.contact-form .btn { align-self: flex-start; margin-top: 0.5rem; }
+.form-note {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+    line-height: 1.55;
+    margin-top: 0.5rem;
+}
+
+/* ============ Legal pages (regolamento, disposizioni) ============ */
+.legal-body {
+    padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.legal-inner { max-width: 42rem; }
+.legal-section {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--hairline);
+}
+.legal-section:last-child { border-bottom: none; }
+.legal-section h2 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 32, 'SOFT' 80;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.014em;
+    color: var(--ink);
+    margin-bottom: 0.85rem;
+}
+.legal-section p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--ink-2);
+}
+.legal-link a {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    color: var(--terra-deep);
+    border-bottom: 1px solid var(--terra-deep);
+    padding-bottom: 2px;
+    transition: opacity .25s ease;
+}
+.legal-link a:hover { opacity: 0.7; }
+
+/* ============ Footer legal links ============ */
+.foot-legal {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+.foot-legal a { transition: color .25s ease; }
+.foot-legal a:hover { color: var(--ink); }
+.foot-legal span { color: var(--hairline-2); }
