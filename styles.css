@@ -1383,3 +1383,99 @@
 .foot-legal a { transition: color .25s ease; }
 .foot-legal a:hover { color: var(--ink); }
 .foot-legal span { color: var(--hairline-2); }
+
+/* ============ Crew spread (equipaggio editorial layout) ============ */
+.crew-spread {
+    padding: clamp(1.25rem, 2.5vw, 2.25rem) var(--gutter) clamp(3rem, 6vw, 5rem);
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: stretch;
+}
+.crew-spread.reverse {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+.crew-spread-portrait {
+    overflow: hidden;
+    margin-left: calc(-1 * var(--gutter));
+    min-height: 540px;
+}
+.crew-spread.reverse .crew-spread-portrait {
+    margin-left: 0;
+    margin-right: calc(-1 * var(--gutter));
+}
+.crew-spread-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+    transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+.crew-spread.reveal.in .crew-spread-portrait img {
+    transform: scale(1.0);
+}
+.crew-spread-portrait:hover img { transform: scale(1.03); }
+
+.crew-spread-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0.5rem;
+}
+.crew-spread-head {
+    padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    border-bottom: 1px solid var(--hairline);
+}
+.crew-spread-head .label {
+    display: inline-block;
+    margin-bottom: clamp(0.9rem, 1.5vw, 1.4rem);
+}
+.crew-spread-head h1 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-weight: 350;
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    line-height: 0.96;
+    letter-spacing: -0.024em;
+    color: var(--ink);
+}
+.crew-spread-head h1 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.crew-bio .crew-meta-full {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+.crew-bio p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin-bottom: 1.1rem;
+    max-width: 42rem;
+}
+.crew-bio p:last-child { margin-bottom: 0; }
+
+@media (max-width: 900px) {
+    .crew-spread,
+    .crew-spread.reverse {
+        grid-template-columns: 1fr;
+        gap: clamp(1.5rem, 4vw, 2.5rem);
+    }
+    .crew-spread-portrait,
+    .crew-spread.reverse .crew-spread-portrait {
+        margin-left: calc(-1 * var(--gutter));
+        margin-right: calc(-1 * var(--gutter));
+        min-height: 0;
+        aspect-ratio: 4/5;
+    }
+    .crew-spread.reverse .crew-spread-portrait { order: -1; }
+}
