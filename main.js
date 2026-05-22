@@ -770,3 +770,19 @@
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
         document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+        // Highlight the nav item matching the current page.
+        // For tour-* detail pages, the parent /tour route stays highlighted.
+        (function highlightCurrentNav() {
+            const path = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+            const root = path === '' || path === 'index.html';
+            document.querySelectorAll('nav.primary a, .drawer-nav a').forEach(a => {
+                const href = (a.getAttribute('href') || '').toLowerCase();
+                if (!href || href.startsWith('#')) return;
+                if (root) return; // landing has no nav item to highlight
+                if (href === path) a.classList.add('current');
+                // tour-crociera/experience/escursione → highlight /tour
+                else if (href === 'tour.html' && path.startsWith('tour-')) a.classList.add('current');
+                // disposizioni → highlight via foot.terms only (no nav match)
+            });
+        })();
