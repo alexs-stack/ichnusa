@@ -24,7 +24,7 @@
 
             /* Rhythm */
             --gutter: clamp(1.25rem, 3vw, 2.5rem);
-            --section-y: clamp(5rem, 11vw, 9rem);
+            --section-y: clamp(2.5rem, 5vw, 4rem);
             --max: 1440px;
         }
 
