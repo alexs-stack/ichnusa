@@ -3216,3 +3216,38 @@
 @media (max-width: 540px) {
     .gallery-item--wide { grid-column: span 2; }
 }
+
+/* ============ Tour info inline (inside editorial-spread-body) ============ */
+.tour-info-inline {
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+    padding-top: clamp(1.25rem, 2.5vw, 2rem);
+    border-top: 1px solid var(--hairline);
+    display: grid;
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+}
+.tour-info-block .label {
+    display: block;
+    margin-bottom: 0.65rem;
+}
+.tour-info-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tour-info-block li {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted var(--hairline-2);
+    display: grid;
+    grid-template-columns: 0.8rem 1fr;
+    gap: 0.3rem;
+}
+.tour-info-block li:last-child { border-bottom: none; }
+.tour-info-block li::before {
+    content: '·';
+    color: var(--terra);
+    font-weight: 700;
+    line-height: 1.55;
+}
