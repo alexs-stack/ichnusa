@@ -2205,3 +2205,165 @@
     .partner-inner { grid-template-columns: 1fr; gap: 0.5rem; }
     .partner-tag { justify-self: start; text-align: left; }
 }
+
+/* ============ Instagram showcase + marquee ============ */
+.ig-showcase {
+    padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(2rem, 4vw, 3rem);
+    border-top: 1px solid var(--hairline);
+    overflow: hidden;
+}
+.ig-head {
+    max-width: var(--max);
+    margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: end;
+}
+.ig-head .label { display: inline-block; margin-bottom: 0.8rem; }
+.ig-head h2 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    line-height: 1.0;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+}
+.ig-head h2 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.ig-lede {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 38rem;
+}
+.ig-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 0.3rem;
+    transition: opacity .25s ease;
+}
+.ig-cta:hover { opacity: 0.8; }
+.ig-handle {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 80, 'SOFT' 80;
+    font-style: italic;
+    font-size: clamp(1.4rem, 2.4vw, 1.95rem);
+    color: var(--terra-deep);
+    letter-spacing: -0.015em;
+}
+.ig-follow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+}
+@media (max-width: 720px) {
+    .ig-head { grid-template-columns: 1fr; }
+    .ig-cta { align-items: flex-start; text-align: left; }
+}
+
+.ig-marquee {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.ig-track {
+    display: flex;
+    gap: 1rem;
+    animation: ig-scroll 50s linear infinite;
+    width: max-content;
+}
+.ig-track:hover { animation-play-state: paused; }
+.ig-tile {
+    flex-shrink: 0;
+    width: clamp(180px, 22vw, 280px);
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    position: relative;
+    background: var(--parchment-2);
+}
+.ig-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .3s ease;
+}
+.ig-tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.15) 100%);
+    pointer-events: none;
+}
+.ig-tile:hover img { transform: scale(1.06); filter: brightness(1.05); }
+@keyframes ig-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ig-track { animation: none; }
+}
+
+/* ============ Press strip ============ */
+.press-strip {
+    padding: clamp(2rem, 4vw, 3rem) var(--gutter);
+    border-top: 1px solid var(--hairline);
+}
+.press-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: baseline;
+}
+.press-inner .label { padding-top: 0.4rem; color: var(--ink-3); }
+.press-item a {
+    display: grid;
+    gap: 0.4rem;
+    padding: 1rem 0;
+    transition: color .25s ease;
+}
+.press-item a:hover .press-title { color: var(--terra-deep); }
+.press-source {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra);
+}
+.press-title {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 80, 'SOFT' 80;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+    color: var(--ink);
+    line-height: 1.25;
+    letter-spacing: -0.012em;
+    transition: color .25s ease;
+}
+.press-meta {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    color: var(--ink-3);
+}
+@media (max-width: 720px) {
+    .press-inner { grid-template-columns: 1fr; gap: 0.5rem; }
+}

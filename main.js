@@ -80,6 +80,15 @@
                 // Partner
                 'partner.label': "Sponsor ufficiale",
                 'partner.tag': "A bordo, la birra è di casa.",
+                
+                // Instagram + Press
+                'ig.label': "Su Instagram",
+                'ig.h2': "Segui il <em>viaggio</em>.",
+                'ig.lede': "Foto dal pozzetto, rotte del giorno, tramonti rubati. Il diario di bordo di Ichnusa.",
+                'ig.follow': "Seguici su Instagram →",
+                'press.label': "Sulla stampa",
+                'press.vaielettrico': "«Turismo elettrico — La Sardegna con la e-barca»",
+                'press.read': "Leggi l'articolo",
                 'foot.location': "Cagliari · Sardegna · P.IVA 02972820928",
 
                 // ---- NAV additions ----
@@ -327,6 +336,14 @@
                 'gps.cta': "Watch live on AirCam",
                 'partner.label': "Official sponsor",
                 'partner.tag': "Aboard, the beer is at home.",
+                
+                'ig.label': "On Instagram",
+                'ig.h2': "Follow the <em>journey</em>.",
+                'ig.lede': "Photos from the cockpit, daily routes, stolen sunsets. Ichnusa's logbook.",
+                'ig.follow': "Follow us on Instagram →",
+                'press.label': "Press",
+                'press.vaielettrico': "«Electric tourism — Sardinia by e-boat»",
+                'press.read': "Read the article",
                 'foot.location': "Cagliari · Sardinia · VAT 02972820928",
 
                 'nav.rates': "Rates", 'nav.philosophy': "Philosophy",
@@ -564,6 +581,14 @@
                 'gps.cta': "Live auf AirCam ansehen",
                 'partner.label': "Offizieller Sponsor",
                 'partner.tag': "An Bord ist das Bier zu Hause.",
+                
+                'ig.label': "Auf Instagram",
+                'ig.h2': "Folge der <em>Reise</em>.",
+                'ig.lede': "Fotos aus dem Cockpit, Tagesrouten, gestohlene Sonnenuntergänge. Ichnusas Logbuch.",
+                'ig.follow': "Folge uns auf Instagram →",
+                'press.label': "Presse",
+                'press.vaielettrico': "«Elektrischer Tourismus — Sardinien mit dem E-Boot»",
+                'press.read': "Artikel lesen",
                 'foot.location': "Cagliari · Sardinien · USt-ID 02972820928",
 
                 'nav.rates': "Preise", 'nav.philosophy': "Philosophie",
