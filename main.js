@@ -120,6 +120,7 @@
                 
                 // Polish round 2
                 'hero.season': "Stagione 2026 · Aprile — Ottobre",
+                'hero.scroll': "Scopri",
                 'hero.cta': "Vedi tour e disponibilità",
                 'hero.label': "N° 01 — Dal 1982",
                 'doc.label': "N° 01.5 — Documentario",
@@ -424,6 +425,7 @@
                 'crew.cta': "Meet the crew",
                 
                 'hero.season': "2026 Season · April — October",
+                'hero.scroll': "Discover",
                 'hero.cta': "See tours & availability",
                 'hero.label': "N° 01 — Since 1982",
                 'doc.label': "N° 01.5 — Documentary",
@@ -718,6 +720,7 @@
                 'crew.cta': "Die Crew kennenlernen",
                 
                 'hero.season': "Saison 2026 · April — Oktober",
+                'hero.scroll': "Entdecken",
                 'hero.cta': "Touren & Verfügbarkeit",
                 'hero.label': "N° 01 — Seit 1982",
                 'doc.label': "N° 01.5 — Dokumentation",
