@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://alexs-stack.github.io/ichnusa/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/la-barca.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/tour.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/tariffe.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/filosofia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/equipaggio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/contatti.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/tour-crociera.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/tour-experience.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/tour-escursione.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/regolamento.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://alexs-stack.github.io/ichnusa/disposizioni.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

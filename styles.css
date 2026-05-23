@@ -1876,3 +1876,147 @@
     .rate-daily-grid li:nth-child(3n) { border-right: none; }
     .rates-notes-compact { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+
+/* ============ Documentary video section (Filosofia) ============ */
+.doc-video {
+    padding: clamp(2rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+    border-top: 1px solid var(--hairline);
+}
+.doc-video-head {
+    max-width: 42rem;
+    margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
+    text-align: center;
+}
+.doc-video-head .label { display: inline-block; margin-bottom: 1rem; }
+.doc-video-head h2 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    line-height: 1.0;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+}
+.doc-video-head h2 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.doc-video-head p {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+}
+.doc-video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--ink);
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.25), 0 8px 20px -10px rgba(0,0,0,0.15);
+}
+.doc-video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ============ Cookie consent banner ============ */
+.cookie-banner {
+    position: fixed;
+    left: var(--gutter);
+    right: var(--gutter);
+    bottom: clamp(1rem, 2.5vw, 1.75rem);
+    z-index: 80;
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.1rem 1.4rem;
+    background: var(--ink);
+    color: var(--parchment);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 25px 60px -25px rgba(0,0,0,0.4), 0 10px 30px -10px rgba(0,0,0,0.25);
+    font-size: 0.88rem;
+    line-height: 1.45;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity .5s cubic-bezier(.2,.7,.2,1), transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.cookie-banner.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.cookie-banner p { color: color-mix(in oklch, var(--parchment) 88%, transparent); margin: 0; }
+.cookie-banner a {
+    color: var(--terra-soft);
+    border-bottom: 1px solid color-mix(in oklch, var(--terra-soft) 50%, transparent);
+    padding-bottom: 1px;
+    transition: opacity .25s ease;
+}
+.cookie-banner a:hover { opacity: 0.8; }
+.cookie-banner-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+.cookie-btn {
+    padding: 0.55rem 1.1rem;
+    border-radius: 100px;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid color-mix(in oklch, var(--parchment) 35%, transparent);
+    background: transparent;
+    color: var(--parchment);
+    transition: background .25s ease, color .25s ease;
+}
+.cookie-btn:hover {
+    background: var(--parchment);
+    color: var(--ink);
+}
+.cookie-btn.primary {
+    background: var(--parchment);
+    color: var(--ink);
+    border-color: var(--parchment);
+}
+.cookie-btn.primary:hover {
+    background: var(--terra-soft);
+    border-color: var(--terra-soft);
+    color: var(--ink);
+}
+@media (max-width: 640px) {
+    .cookie-banner { flex-direction: column; align-items: flex-start; padding: 1rem; }
+    .cookie-banner-actions { width: 100%; }
+    .cookie-btn { flex: 1; text-align: center; }
+}
+
+/* Specs: 3 cols → 2 cols (less Ikea, more aerated) */
+.specs.specs-full {
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 560px) {
+    .specs.specs-full { grid-template-columns: 1fr; }
+}
+
+/* WhatsApp FAB: conditional visibility — hidden by default, show on scroll */
+.whatsapp-fab {
+    opacity: 0;
+    transform: translateY(20px) scale(0.85);
+    pointer-events: none;
+    transition: opacity .35s cubic-bezier(.2,.7,.2,1), transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.whatsapp-fab.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}

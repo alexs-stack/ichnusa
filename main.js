@@ -795,3 +795,47 @@
                 // disposizioni → highlight via foot.terms only (no nav match)
             });
         })();
+
+        // ----------- Cookie consent banner -----------
+        // Texts per language (essential cookies only — no tracking yet)
+        const COOKIE_TXT = {
+            it: { msg: "Usiamo cookie tecnici essenziali per il funzionamento del sito. Nessun tracciamento.", accept: "Accetto", more: "Privacy" },
+            en: { msg: "We use essential technical cookies. No tracking.", accept: "Accept", more: "Privacy" },
+            de: { msg: "Wir verwenden nur technisch notwendige Cookies. Kein Tracking.", accept: "Akzeptieren", more: "Datenschutz" }
+        };
+        (function cookieBanner() {
+            let consent;
+            try { consent = localStorage.getItem('ic.cookie'); } catch(e) {}
+            if (consent === 'ok') return;
+            const lang = (document.documentElement.lang || 'it');
+            const t = COOKIE_TXT[lang] || COOKIE_TXT.it;
+            const banner = document.createElement('div');
+            banner.className = 'cookie-banner';
+            banner.innerHTML = `
+                <p>${t.msg} <a href="https://www.ichnusacharter.com/privacy-policy/" target="_blank" rel="noopener">${t.more} →</a></p>
+                <div class="cookie-banner-actions">
+                    <button class="cookie-btn primary" data-cookie-ok>${t.accept}</button>
+                </div>
+            `;
+            document.body.appendChild(banner);
+            requestAnimationFrame(() => banner.classList.add('show'));
+            banner.querySelector('[data-cookie-ok]').addEventListener('click', () => {
+                try { localStorage.setItem('ic.cookie', 'ok'); } catch(e) {}
+                banner.classList.remove('show');
+                setTimeout(() => banner.remove(), 500);
+            });
+        })();
+
+        // ----------- WhatsApp FAB conditional visibility -----------
+        // Hide on initial view; reveal after the user scrolls past ~half a viewport
+        (function fabScroll() {
+            const fab = document.querySelector('.whatsapp-fab');
+            if (!fab) return;
+            const threshold = 400;
+            const update = () => {
+                if (window.scrollY > threshold) fab.classList.add('show');
+                else fab.classList.remove('show');
+            };
+            document.addEventListener('scroll', update, { passive: true });
+            update();
+        })();
