@@ -4,8 +4,8 @@
                 'nav.boat': "La Barca", 'nav.tour': "Tour", 'nav.sustain': "Sostenibilità",
                 'nav.cagliari': "Cagliari", 'nav.crew': "Equipaggio", 'nav.contact': "Contatti", 'nav.menu': "Menu",
                 'hero.label': "N° 01 — Cagliari, Sardegna",
-                'hero.h1': "Noleggio barca a vela<br><em>Cagliari</em>.",
-                'hero.lede': "L'unico veliero ecosostenibile in Sardegna. Prenota la nostra barca a partire da 100 euro.",
+                'hero.h1': "Il vento<br>sceglie la <em>rotta</em>.",
+                'hero.lede': "Ichnusa, l'unico veliero classico ecosostenibile della Sardegna. Charter a vela da Cagliari, con skipper, a partire da 100 euro.",
                 'hero.cta': "Guarda tutti i nostri tour",
                 'hero.link': "Scopri la barca",
                 'hero.imgAlt': "Ichnusa al largo del Poetto, Cagliari",
@@ -70,6 +70,16 @@
                 'contact.berth': "Ormeggio", 'contact.live': "In diretta",
                 'contact.address': "Pennello di Bonaria<br>09125 Cagliari, Sardegna",
                 'contact.liveV': "AirCam · Visualizza la barca",
+                
+                // GPS plotter
+                'gps.label': "N° 05.5 — Dove siamo",
+                'gps.h2': "Ichnusa, in <em>diretta</em>.",
+                'gps.statusLabel': "In rada",
+                'gps.locName': "Pennello di Bonaria",
+                'gps.cta': "Guarda in diretta su AirCam",
+                // Partner
+                'partner.label': "Sponsor ufficiale",
+                'partner.tag': "A bordo, la birra è di casa.",
                 'foot.location': "Cagliari · Sardegna · P.IVA 02972820928",
 
                 // ---- NAV additions ----
@@ -243,8 +253,8 @@
                 'nav.boat': "The Yacht", 'nav.tour': "Tours", 'nav.sustain': "Sustainability",
                 'nav.cagliari': "Cagliari", 'nav.crew': "Crew", 'nav.contact': "Contact", 'nav.menu': "Menu",
                 'hero.label': "N° 01 — Cagliari, Sardinia",
-                'hero.h1': "Sailing yacht charter<br><em>Cagliari</em>.",
-                'hero.lede': "The only eco-friendly classic boat with zero impact. Rent our sailboat with skipper in Sardinia starting from 100 euros.",
+                'hero.h1': "The wind chooses<br>the <em>course</em>.",
+                'hero.lede': "Ichnusa, the only classic eco-sustainable sailing yacht in Sardinia. Sailing charter from Cagliari, with skipper, starting from 100 euros.",
                 'hero.cta': "See all our tours",
                 'hero.link': "Discover the yacht",
                 'hero.imgAlt': "Ichnusa sailing off Poetto, Cagliari",
@@ -309,6 +319,14 @@
                 'contact.berth': "Berth", 'contact.live': "Live",
                 'contact.address': "Pennello di Bonaria<br>09125 Cagliari, Sardinia",
                 'contact.liveV': "AirCam · See the yacht live",
+                
+                'gps.label': "N° 05.5 — Where we are",
+                'gps.h2': "Ichnusa, <em>live</em>.",
+                'gps.statusLabel': "Moored",
+                'gps.locName': "Pennello di Bonaria",
+                'gps.cta': "Watch live on AirCam",
+                'partner.label': "Official sponsor",
+                'partner.tag': "Aboard, the beer is at home.",
                 'foot.location': "Cagliari · Sardinia · VAT 02972820928",
 
                 'nav.rates': "Rates", 'nav.philosophy': "Philosophy",
@@ -472,8 +490,8 @@
                 'nav.boat': "Das Boot", 'nav.tour': "Touren", 'nav.sustain': "Nachhaltigkeit",
                 'nav.cagliari': "Cagliari", 'nav.crew': "Crew", 'nav.contact': "Kontakt", 'nav.menu': "Menü",
                 'hero.label': "N° 01 — Cagliari, Sardinien",
-                'hero.h1': "Segelboot mieten<br><em>Cagliari</em>.",
-                'hero.lede': "Das einzige ökologisch nachhaltige Segelschiff Sardiniens. Buchen Sie unser Boot ab 100 Euro.",
+                'hero.h1': "Der Wind<br>wählt die <em>Route</em>.",
+                'hero.lede': "Ichnusa, das einzige klassische ökologisch nachhaltige Segelschiff Sardiniens. Segeltörn ab Cagliari, mit Skipper, ab 100 Euro.",
                 'hero.cta': "Alle Touren ansehen",
                 'hero.link': "Das Boot entdecken",
                 'hero.imgAlt': "Ichnusa vor Poetto, Cagliari",
@@ -538,6 +556,14 @@
                 'contact.berth': "Liegeplatz", 'contact.live': "Live",
                 'contact.address': "Pennello di Bonaria<br>09125 Cagliari, Sardinien",
                 'contact.liveV': "AirCam · Boot live ansehen",
+                
+                'gps.label': "N° 05.5 — Wo wir sind",
+                'gps.h2': "Ichnusa, <em>live</em>.",
+                'gps.statusLabel': "Vor Anker",
+                'gps.locName': "Pennello di Bonaria",
+                'gps.cta': "Live auf AirCam ansehen",
+                'partner.label': "Offizieller Sponsor",
+                'partner.tag': "An Bord ist das Bier zu Hause.",
                 'foot.location': "Cagliari · Sardinien · USt-ID 02972820928",
 
                 'nav.rates': "Preise", 'nav.philosophy': "Philosophie",
@@ -838,4 +864,31 @@
             };
             document.addEventListener('scroll', update, { passive: true });
             update();
+        })();
+
+        // ----------- GPS plotter: Leaflet map with Cagliari marker -----------
+        (function gpsPlotter() {
+            const el = document.getElementById('gpsMap');
+            if (!el || typeof L === 'undefined') return;
+            // Pennello di Bonaria, Cagliari (default mooring)
+            const CAGLIARI = [39.2017, 9.1184];
+            const map = L.map(el, {
+                zoomControl: true,
+                scrollWheelZoom: false,
+                attributionControl: true
+            }).setView(CAGLIARI, 11);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a> · <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 18
+            }).addTo(map);
+            const boatIcon = L.divIcon({
+                className: 'gps-boat-marker',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+            L.marker(CAGLIARI, { icon: boatIcon }).addTo(map);
+            // Restore mouse wheel zoom on click
+            map.on('click', () => map.scrollWheelZoom.enable());
+            map.on('mouseout', () => map.scrollWheelZoom.disable());
         })();

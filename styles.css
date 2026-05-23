@@ -2020,3 +2020,188 @@
     transform: translateY(0) scale(1);
     pointer-events: auto;
 }
+
+/* ============ GPS Plotter — live position ============ */
+.gps-plotter {
+    padding: clamp(2.5rem, 5vw, 4rem) var(--gutter);
+    max-width: var(--max);
+    margin: 0 auto;
+}
+.gps-inner { max-width: var(--max); margin: 0 auto; }
+.gps-head {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+    align-items: end;
+}
+.gps-head .label { padding-top: 0.4rem; }
+.gps-head h2 {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-weight: 350;
+    font-size: clamp(2rem, 3.6vw, 2.8rem);
+    line-height: 1.0;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+}
+.gps-head h2 em {
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-style: italic;
+    color: var(--terra-deep);
+}
+.gps-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/8;
+    border: 1px solid var(--hairline);
+    border-radius: 0;
+    overflow: hidden;
+    background: oklch(0.92 0.015 220);
+    box-shadow: 0 25px 60px -25px rgba(0,0,0,0.18), 0 10px 25px -10px rgba(0,0,0,0.1);
+}
+.gps-map { position: absolute; inset: 0; z-index: 1; }
+/* Subtle wash over OSM tiles for editorial restraint */
+.gps-map .leaflet-tile-pane { filter: saturate(0.7) brightness(1.04) contrast(0.95); }
+.gps-map .leaflet-control-attribution {
+    background: color-mix(in oklch, var(--parchment) 90%, transparent);
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+}
+.gps-map .leaflet-control-attribution a { color: var(--ink-2); }
+.gps-overlay {
+    position: absolute;
+    z-index: 2;
+    top: clamp(1rem, 2vw, 1.5rem);
+    left: clamp(1rem, 2vw, 1.5rem);
+    background: color-mix(in oklch, var(--parchment) 92%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 0.85rem 1.1rem;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px -8px rgba(0,0,0,0.18), 0 0 0 1px var(--hairline);
+    max-width: 22rem;
+}
+.gps-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terra-deep);
+    margin-bottom: 0.45rem;
+}
+.gps-pulse {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: oklch(0.65 0.18 145);
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+.gps-pulse::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: oklch(0.65 0.18 145);
+    animation: gps-pulse 1.8s cubic-bezier(.4,0,.6,1) infinite;
+}
+@keyframes gps-pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(3); opacity: 0; }
+}
+.gps-loc-name {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 32, 'SOFT' 70;
+    font-size: 1.2rem;
+    color: var(--ink);
+    letter-spacing: -0.012em;
+    display: block;
+    line-height: 1.15;
+}
+.gps-loc-coords {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    display: block;
+    margin-top: 0.3rem;
+    font-feature-settings: 'tnum';
+}
+.gps-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--ink);
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--ink);
+    transition: color .25s ease, border-color .25s ease;
+}
+.gps-cta:hover { color: var(--terra-deep); border-color: var(--terra-deep); }
+.gps-cta .arrow { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.gps-cta:hover .arrow { transform: translateX(3px); }
+
+/* Custom boat marker */
+.gps-boat-marker {
+    width: 20px;
+    height: 20px;
+    background: var(--terra-deep);
+    border: 3px solid var(--parchment);
+    border-radius: 50%;
+    box-shadow: 0 4px 14px -2px rgba(0,0,0,0.4), 0 0 0 6px color-mix(in oklch, var(--terra-deep) 25%, transparent);
+}
+
+@media (max-width: 720px) {
+    .gps-head { grid-template-columns: 1fr; gap: 0.5rem; align-items: start; }
+    .gps-overlay { right: clamp(1rem, 2vw, 1.5rem); max-width: none; }
+    .gps-frame { aspect-ratio: 4/5; }
+}
+
+/* ============ Partnership strip ============ */
+.partner-strip {
+    padding: clamp(2rem, 4vw, 3rem) var(--gutter);
+    background: var(--parchment-2);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+}
+.partner-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 8.5rem auto 1fr;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: baseline;
+}
+.partner-inner .label { color: var(--ink-3); }
+.partner-name {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 80, 'SOFT' 80;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    color: var(--terra-deep);
+    letter-spacing: -0.015em;
+}
+.partner-tag {
+    font-family: var(--serif);
+    font-variation-settings: 'opsz' 32, 'SOFT' 70;
+    font-size: 1rem;
+    color: var(--ink-2);
+    letter-spacing: -0.005em;
+    justify-self: end;
+    text-align: right;
+}
+@media (max-width: 720px) {
+    .partner-inner { grid-template-columns: 1fr; gap: 0.5rem; }
+    .partner-tag { justify-self: start; text-align: left; }
+}

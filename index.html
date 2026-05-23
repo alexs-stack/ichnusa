@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -50,8 +51,8 @@
                     <span class="label label-terra" data-i18n="hero.label">N° 01 — Cagliari, Sardegna</span>
                     <span class="rule" aria-hidden="true"></span>
                 </div>
-                <h1 data-i18n="hero.h1">Noleggio barca a vela<br><em>Cagliari</em>.</h1>
-                <p class="hero-lede" data-i18n="hero.lede">L'unico veliero ecosostenibile in Sardegna. Prenota la nostra barca a partire da 100 euro.</p>
+                <h1 data-i18n="hero.h1">Il vento<br>sceglie la <em>rotta</em>.</h1>
+                <p class="hero-lede" data-i18n="hero.lede">Ichnusa, l'unico veliero classico ecosostenibile della Sardegna. Charter a vela da Cagliari, con skipper, a partire da 100 euro.</p>
                 <div class="hero-actions">
                     <a href="#tour" class="btn">
                         <span data-i18n="hero.cta">Guarda tutti i nostri tour</span>
@@ -239,6 +240,32 @@
             </div>
         </section>
 
+        <section id="dove" class="gps-plotter">
+            <div class="gps-inner">
+                <header class="gps-head">
+                    <span class="label label-terra" data-i18n="gps.label">N° 05.5 — Dove siamo</span>
+                    <h2 data-i18n="gps.h2">Ichnusa, in <em>diretta</em>.</h2>
+                </header>
+                <div class="gps-frame">
+                    <div id="gpsMap" class="gps-map"></div>
+                    <div class="gps-overlay">
+                        <div class="gps-status">
+                            <span class="gps-pulse" aria-hidden="true"></span>
+                            <span class="gps-status-label" data-i18n="gps.statusLabel">In rada</span>
+                        </div>
+                        <div class="gps-loc">
+                            <span class="gps-loc-name" data-i18n="gps.locName">Pennello di Bonaria</span>
+                            <span class="gps-loc-coords">39° 12′ N · 9° 07′ E</span>
+                        </div>
+                        <a href="https://aircam.io/cam/ichnusa-charter" target="_blank" rel="noopener" class="gps-cta">
+                            <span data-i18n="gps.cta">Guarda in diretta su AirCam</span>
+                            <span class="arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="equipaggio">
             <header class="section-head">
                 <div class="label-col"><span class="label" data-i18n="crew.label">N° 06 — Equipaggio</span></div>
@@ -303,6 +330,14 @@
         </section>
     </main>
 
+    <section class="partner-strip reveal">
+        <div class="partner-inner">
+            <span class="label" data-i18n="partner.label">Sponsor ufficiale</span>
+            <div class="partner-name">Birra Ichnusa</div>
+            <span class="partner-tag" data-i18n="partner.tag">A bordo, la birra è di casa.</span>
+        </div>
+    </section>
+
     <footer>
         <div class="foot-inner">
             <div>© 2025 Ichnusa Charter</div>
@@ -345,6 +380,7 @@
     </div>
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
     <script src="main.js" defer></script>
 </body>
 </html>
