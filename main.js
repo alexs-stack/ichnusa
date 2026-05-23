@@ -117,6 +117,30 @@
                 'crew.mathias.teaser': "Ex ingegnere, oggi capitano. Abilitato per navi da diporto, socio Lega Navale e Federazione Italiana Vela. I mari della Sardegna sono la sua casa.",
                 'crew.camille.teaser': "Marinaia ed ecologa, Yacht Master. Parla 4 lingue, formata in oceanografia, ha solcato il Mediterraneo e l'Atlantico.",
                 'crew.cta': "Conosci l'equipaggio",
+                
+                // Polish round 2
+                'hero.season': "Stagione 2026 · Aprile — Ottobre",
+                'hero.cta': "Vedi tour e disponibilità",
+                'hero.label': "N° 01 — Dal 1982",
+                'doc.label': "N° 01.5 — Documentario",
+                'doc.h2': "Sulla <em>rotta verde</em>.",
+                'doc.lede': "Il periplo della Sardegna a vela. Trailer del documentario, dicembre 2015.",
+                'tour.allCta': "Vedi tutti i tour e tariffe",
+                'tour.label': "N° 03 — Tour",
+                'tour.h2': "Tre modi di <em>incontrare</em><br>il mare.",
+                'nav.home': "Home",
+                'foot.cookiePrefs': "Preferenze cookie",
+                'tourExtra.includesLabel': "La quota comprende",
+                'tourExtra.bringLabel': "Cosa portare",
+                'tourExtra.forLabel': "Per chi è",
+                'tourExtra.bring.1': "Borsone morbido (vietati trolley rigidi)",
+                'tourExtra.bring.2': "Scarpe da vela con suola chiara",
+                'tourExtra.bring.3': "Costume, asciugamano, occhiali da sole",
+                'tourExtra.bring.4': "Felpa e incerata per la sera",
+                'err.label': "N° 404 — Fuori rotta",
+                'err.h1': "Ti sei perso in <em>mare</em>.",
+                'err.lede': "La pagina che cercavi non esiste o è stata spostata. Torna al porto.",
+                'err.cta': "Torna alla home",
                 'foot.location': "Cagliari · Sardegna · P.IVA 02972820928",
 
                 // ---- NAV additions ----
@@ -398,6 +422,29 @@
                 'crew.mathias.teaser': "Former engineer, now captain. Licensed officer for pleasure vessels, member of Lega Navale and the Italian Sailing Federation. The Sardinian seas are his home.",
                 'crew.camille.teaser': "Sailor and ecologist, Yacht Master. Speaks 4 languages, trained in oceanography, sailed the Mediterranean and the Atlantic.",
                 'crew.cta': "Meet the crew",
+                
+                'hero.season': "2026 Season · April — October",
+                'hero.cta': "See tours & availability",
+                'hero.label': "N° 01 — Since 1982",
+                'doc.label': "N° 01.5 — Documentary",
+                'doc.h2': "On the <em>green route</em>.",
+                'doc.lede': "Sailing around Sardinia. Trailer of the documentary, December 2015.",
+                'tour.allCta': "See all tours & rates",
+                'tour.label': "N° 03 — Tours",
+                'tour.h2': "Three ways to <em>meet</em><br>the sea.",
+                'nav.home': "Home",
+                'foot.cookiePrefs': "Cookie preferences",
+                'tourExtra.includesLabel': "The rate includes",
+                'tourExtra.bringLabel': "What to bring",
+                'tourExtra.forLabel': "Who it's for",
+                'tourExtra.bring.1': "Soft duffel bag (no rigid trolleys)",
+                'tourExtra.bring.2': "Sailing shoes with light-coloured sole",
+                'tourExtra.bring.3': "Swimsuit, towel, sunglasses",
+                'tourExtra.bring.4': "Sweatshirt and oilskin for the evening",
+                'err.label': "N° 404 — Off course",
+                'err.h1': "You're lost at <em>sea</em>.",
+                'err.lede': "The page you were looking for doesn't exist or has moved. Head back to port.",
+                'err.cta': "Back to home",
                 'foot.location': "Cagliari · Sardinia · VAT 02972820928",
 
                 'nav.rates': "Rates", 'nav.philosophy': "Philosophy",
@@ -669,6 +716,29 @@
                 'crew.mathias.teaser': "Ehemaliger Ingenieur, jetzt Kapitän. Zugelassen für Sportschiffe, Mitglied der Lega Navale und der Italienischen Segelföderation. Die Meere Sardiniens sind sein Zuhause.",
                 'crew.camille.teaser': "Seglerin und Ökologin, Yacht Master. Spricht 4 Sprachen, ausgebildet in Ozeanographie, befuhr Mittelmeer und Atlantik.",
                 'crew.cta': "Die Crew kennenlernen",
+                
+                'hero.season': "Saison 2026 · April — Oktober",
+                'hero.cta': "Touren & Verfügbarkeit",
+                'hero.label': "N° 01 — Seit 1982",
+                'doc.label': "N° 01.5 — Dokumentation",
+                'doc.h2': "Auf der <em>grünen Route</em>.",
+                'doc.lede': "Die Umsegelung Sardiniens. Trailer der Dokumentation, Dezember 2015.",
+                'tour.allCta': "Alle Touren & Preise",
+                'tour.label': "N° 03 — Touren",
+                'tour.h2': "Drei Wege, dem Meer<br>zu <em>begegnen</em>.",
+                'nav.home': "Home",
+                'foot.cookiePrefs': "Cookie-Einstellungen",
+                'tourExtra.includesLabel': "Im Preis enthalten",
+                'tourExtra.bringLabel': "Was mitbringen",
+                'tourExtra.forLabel': "Für wen",
+                'tourExtra.bring.1': "Weiche Reisetasche (keine harten Trolleys)",
+                'tourExtra.bring.2': "Segelschuhe mit heller Sohle",
+                'tourExtra.bring.3': "Badeanzug, Handtuch, Sonnenbrille",
+                'tourExtra.bring.4': "Sweatshirt und Ölzeug für den Abend",
+                'err.label': "N° 404 — Vom Kurs ab",
+                'err.h1': "Sie haben sich auf <em>See</em> verirrt.",
+                'err.lede': "Die gesuchte Seite existiert nicht mehr oder wurde verschoben. Zurück zum Hafen.",
+                'err.cta': "Zur Startseite",
                 'foot.location': "Cagliari · Sardinien · USt-ID 02972820928",
 
                 'nav.rates': "Preise", 'nav.philosophy': "Philosophie",
@@ -971,29 +1041,108 @@
             update();
         })();
 
-        // ----------- GPS plotter: Leaflet map with Cagliari marker -----------
+        // ----------- GPS plotter: Leaflet map (lazy-init via IntersectionObserver) -----------
         (function gpsPlotter() {
             const el = document.getElementById('gpsMap');
-            if (!el || typeof L === 'undefined') return;
-            // Pennello di Bonaria, Cagliari (default mooring)
-            const CAGLIARI = [39.2017, 9.1184];
-            const map = L.map(el, {
-                zoomControl: true,
-                scrollWheelZoom: false,
-                attributionControl: true
-            }).setView(CAGLIARI, 11);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a> · <a href="https://carto.com/attributions">CARTO</a>',
-                subdomains: 'abcd',
-                maxZoom: 18
-            }).addTo(map);
-            const boatIcon = L.divIcon({
-                className: 'gps-boat-marker',
-                iconSize: [20, 20],
-                iconAnchor: [10, 10]
+            if (!el) return;
+            const initMap = () => {
+                if (typeof L === 'undefined') {
+                    // Leaflet not loaded yet — retry shortly
+                    setTimeout(initMap, 200);
+                    return;
+                }
+                const CAGLIARI = [39.2017, 9.1184];
+                const map = L.map(el, {
+                    zoomControl: true,
+                    scrollWheelZoom: false,
+                    attributionControl: true
+                }).setView(CAGLIARI, 11);
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a> · <a href="https://carto.com/attributions">CARTO</a>',
+                    subdomains: 'abcd',
+                    maxZoom: 18
+                }).addTo(map);
+                const boatIcon = L.divIcon({
+                    className: 'gps-boat-marker',
+                    iconSize: [20, 20],
+                    iconAnchor: [10, 10]
+                });
+                L.marker(CAGLIARI, { icon: boatIcon }).addTo(map);
+                map.on('click', () => map.scrollWheelZoom.enable());
+                map.on('mouseout', () => map.scrollWheelZoom.disable());
+            };
+            // Lazy: only init when GPS section gets near the viewport
+            const io = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    io.disconnect();
+                    initMap();
+                }
+            }, { rootMargin: '300px 0px' });
+            io.observe(el);
+        })();
+
+        // ----------- Lazy-init iframes (YouTube doc video) -----------
+        (function lazyIframes() {
+            const lazyIframes = document.querySelectorAll('iframe[data-src]');
+            if (!lazyIframes.length) return;
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        iframe.src = iframe.dataset.src;
+                        io.unobserve(iframe);
+                    }
+                });
+            }, { rootMargin: '200px 0px' });
+            lazyIframes.forEach(f => io.observe(f));
+        })();
+
+        // ----------- WhatsApp message pre-fill on all wa.me links -----------
+        // Builds a contextual message based on the page title or tour ID
+        (function whatsappPrefill() {
+            const links = document.querySelectorAll('a[href*="wa.me/"]');
+            if (!links.length) return;
+            const path = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+            const TOUR_MSG = {
+                'tour-crociera.html': 'Ciao! Vorrei info sulla Crociera Last Minute.',
+                'tour-experience.html': 'Ciao! Vorrei info su Experience Last Minute (3 giorni a vela).',
+                'tour-escursione.html': 'Ciao! Vorrei info sull\'Escursione Last Minute (giornata).',
+                'tariffe.html': 'Ciao! Vorrei un preventivo per Ichnusa Charter.',
+                'contatti.html': 'Ciao! Vorrei info su Ichnusa Charter.',
+                'la-barca.html': 'Ciao! Vorrei info su Ichnusa Charter.',
+                'equipaggio.html': 'Ciao! Vorrei info su Ichnusa Charter.'
+            };
+            const msg = TOUR_MSG[path] || 'Ciao! Vorrei info su Ichnusa Charter.';
+            links.forEach(a => {
+                const href = a.getAttribute('href');
+                if (href.includes('?text=')) return;
+                a.setAttribute('href', href + '?text=' + encodeURIComponent(msg));
             });
-            L.marker(CAGLIARI, { icon: boatIcon }).addTo(map);
-            // Restore mouse wheel zoom on click
-            map.on('click', () => map.scrollWheelZoom.enable());
-            map.on('mouseout', () => map.scrollWheelZoom.disable());
+        })();
+
+        // ----------- Contact form pre-fill from ?tour= URL param -----------
+        (function formPrefill() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+            const params = new URLSearchParams(window.location.search);
+            const tour = params.get('tour');
+            if (!tour) return;
+            const TOUR_MAP = { 'tour1': 'crociera', 'tour2': 'experience', 'tour3': 'escursione' };
+            const value = TOUR_MAP[tour] || tour;
+            const select = form.querySelector('select[name="tour"]');
+            if (select && Array.from(select.options).some(o => o.value === value)) {
+                select.value = value;
+            }
+        })();
+
+        // ----------- Cookie preferences re-open button (footer) -----------
+        (function cookieReopen() {
+            const btn = document.getElementById('cookieReopen');
+            if (!btn) return;
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                try { localStorage.removeItem('ic.cookie'); } catch(err) {}
+                // Reload to re-trigger the banner
+                window.location.reload();
+            });
         })();
