@@ -2502,3 +2502,64 @@
     padding-top: 0.5rem;
     border-top: 1px dotted var(--hairline-2);
 }
+
+/* ============ Hero trust badge ============ */
+.hero-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0.9rem;
+    background: color-mix(in oklch, var(--ink) 4%, transparent);
+    border: 1px solid var(--hairline);
+    border-radius: 100px;
+    transition: background .25s ease, border-color .25s ease, transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.hero-trust:hover {
+    background: color-mix(in oklch, var(--ink) 7%, transparent);
+    border-color: var(--hairline-2);
+    transform: translateY(-1px);
+}
+.hero-trust-stars {
+    color: var(--terra-deep);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+.hero-trust-text {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+}
+
+/* ============ Section-end CTA (landing teasers → subpages) ============ */
+.section-cta {
+    margin-top: 1.75rem;
+    display: inline-flex;
+}
+.section-cta-wrap {
+    max-width: var(--max);
+    margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
+    padding: 0 var(--gutter);
+    text-align: center;
+}
+.section-cta-wrap .section-cta {
+    margin-top: 0;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    border-bottom: 1px solid var(--ink);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    transition: background .25s ease, color .25s ease;
+}
+.section-cta-wrap .section-cta:hover { background: var(--ink); color: var(--parchment); border-bottom-color: var(--ink); }
+.section-cta-wrap .section-cta .arrow { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.section-cta-wrap .section-cta:hover .arrow { transform: translateX(3px); }

@@ -50,7 +50,7 @@
                 </article>
             </div>
             <figure class="editorial-spread-figure">
-                <img src="https://www.ichnusacharter.com/wp-content/uploads/2024/04/Ichnusa-Poetto.jpg" alt="Ichnusa al largo del Poetto" data-i18n-alt="hero.imgAlt">
+                <img src="https://www.ichnusacharter.com/wp-content/uploads/2024/04/Ichnusa-Poetto.jpg" alt="Ichnusa al largo del Poetto" data-i18n-alt="hero.imgAlt" fetchpriority="high">
             </figure>
         </section>
 
@@ -78,7 +78,10 @@
                     <header class="section-head">
                         <div class="label-col"><span class="label" data-i18n="contactPage.formLabel">Richiedi informazioni</span></div>
                     </header>
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form id="contactForm" class="contact-form" action="https://formsubmit.co/info@ichnusacharter.it" method="POST">
+                        <input type="hidden" name="_subject" value="Nuova richiesta da ichnusacharter — sito">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="true">
                         <div class="form-row">
                             <label for="cf-name" data-i18n="form.name">Nome</label>
                             <input id="cf-name" name="nome" type="text" required>

@@ -109,6 +109,14 @@
                 'rev.6.date': "2021",
                 'rev.7': "\"Esperienza fantastica, l'unica imbarcazione sostenibile sarda. Mathias e Cecilia the best.\"",
                 'rev.7.date': "2021",
+                
+                // Hero trust + section teasers
+                'hero.trust': "Recensioni verificate · Google",
+                'boat.teaser': "Ketch del 1982, struttura in legno, coperta flush deck in teak, motore elettrico 30 kw. 8 + 2 posti letto, 4 cabine.",
+                'boat.cta': "Scheda tecnica completa",
+                'crew.mathias.teaser': "Ex ingegnere, oggi capitano. Abilitato per navi da diporto, socio Lega Navale e Federazione Italiana Vela. I mari della Sardegna sono la sua casa.",
+                'crew.camille.teaser': "Marinaia ed ecologa, Yacht Master. Parla 4 lingue, formata in oceanografia, ha solcato il Mediterraneo e l'Atlantico.",
+                'crew.cta': "Conosci l'equipaggio",
                 'foot.location': "Cagliari · Sardegna · P.IVA 02972820928",
 
                 // ---- NAV additions ----
@@ -383,6 +391,13 @@
                 'rev.6.date': "2021",
                 'rev.7': "\"Amazing experience, the only sustainable Sardinian boat. Mathias and Cecilia the best.\"",
                 'rev.7.date': "2021",
+                
+                'hero.trust': "Verified reviews · Google",
+                'boat.teaser': "1982 ketch, wooden structure, teak flush deck, 30 kw electric motor. 8 + 2 berths, 4 cabins.",
+                'boat.cta': "Full technical sheet",
+                'crew.mathias.teaser': "Former engineer, now captain. Licensed officer for pleasure vessels, member of Lega Navale and the Italian Sailing Federation. The Sardinian seas are his home.",
+                'crew.camille.teaser': "Sailor and ecologist, Yacht Master. Speaks 4 languages, trained in oceanography, sailed the Mediterranean and the Atlantic.",
+                'crew.cta': "Meet the crew",
                 'foot.location': "Cagliari · Sardinia · VAT 02972820928",
 
                 'nav.rates': "Rates", 'nav.philosophy': "Philosophy",
@@ -647,6 +662,13 @@
                 'rev.6.date': "2021",
                 'rev.7': "\"Fantastisches Erlebnis, das einzige nachhaltige sardische Boot. Mathias und Cecilia the best.\"",
                 'rev.7.date': "2021",
+                
+                'hero.trust': "Verifizierte Rezensionen · Google",
+                'boat.teaser': "Ketsch von 1982, Holzstruktur, Teak-Flush-Deck, Elektromotor 30 kW. 8 + 2 Schlafplätze, 4 Kabinen.",
+                'boat.cta': "Vollständiges Datenblatt",
+                'crew.mathias.teaser': "Ehemaliger Ingenieur, jetzt Kapitän. Zugelassen für Sportschiffe, Mitglied der Lega Navale und der Italienischen Segelföderation. Die Meere Sardiniens sind sein Zuhause.",
+                'crew.camille.teaser': "Seglerin und Ökologin, Yacht Master. Spricht 4 Sprachen, ausgebildet in Ozeanographie, befuhr Mittelmeer und Atlantik.",
+                'crew.cta': "Die Crew kennenlernen",
                 'foot.location': "Cagliari · Sardinien · USt-ID 02972820928",
 
                 'nav.rates': "Preise", 'nav.philosophy': "Philosophie",
